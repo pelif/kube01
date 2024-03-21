@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: "app-php"
+  labels: 
+    app: "app-php"
+spec: 
+  containers: 
+    - name: app-php
+      image: "pelif/app-kubernetes-fullcycle:latest"    

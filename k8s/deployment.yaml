@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: app-php
+  labels: 
+    app: app-php
+spec: 
+  selector: 
+    matchLabels: 
+      app: app-php
+  replicas: 10
+  template: 
+    metadata:      
+      labels: 
+        app: "app-php"
+    spec: 
+      containers: 
+        - name: app-php
+          image: "pelif/app-kubernetes-fullcycle:v2"    
