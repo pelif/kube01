@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata: 
-  name: app-php
+  name: phpserve
   labels: 
-    app: app-php
+    app: phpserve
 spec: 
   selector: 
     matchLabels: 
-      app: app-php
+      app: phpserve
   replicas: 10
   template: 
     metadata:      
       labels: 
-        app: "app-php"
+        app: "phpserve"
     spec: 
       containers: 
-        - name: app-php
+        - name: phpserve
           image: "pelif/app-kubernetes-fullcycle:latest"    

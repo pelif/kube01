@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: "app-php"
+  name: "phpserve"
   labels: 
-    app: "app-php"
+    app: "phpserve"
 spec: 
   containers: 
-    - name: app-php
+    - name: phpserve
       image: "pelif/app-kubernetes-fullcycle:latest"    

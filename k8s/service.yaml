@@ -1,14 +1,14 @@
 apiVersion: v1 
 kind: Service
 metadata: 
-  name: app-php-service
+  name: phpserve-service
 spec: 
   selector: 
-    app: app-php
+    app: phpserve
   type: ClusterIP
-  ports: 
-  - name: app-php-service
-    port: 80
-    targetPort: 8000
-    protocol: TCP
+  ports:   
+    - protocol: TCP
+      port: 8001    
+      targetPort: 80
+    
 
