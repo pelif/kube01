@@ -8,7 +8,7 @@ spec:
   selector: 
     matchLabels: 
       app: phpserve
-  replicas: 10
+  replicas: 2
   template: 
     metadata:      
       labels: 
@@ -16,4 +16,9 @@ spec:
     spec: 
       containers: 
         - name: phpserve
-          image: "pelif/app-kubernetes-fullcycle:v2"    
+          image: "pelif/app-kubernetes-fullcycle:v3"    
+          env: 
+            - name: NAME
+              value: "PELIF ELNIDA"
+            - name: AGE
+              value: "41"

@@ -16,4 +16,4 @@ spec:
     spec: 
       containers: 
         - name: phpserve
-          image: "pelif/app-kubernetes-fullcycle:latest"    
+          image: "pelif/app-kubernetes-fullcycle:v2"    
