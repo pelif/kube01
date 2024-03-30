@@ -7,4 +7,4 @@ metadata:
 spec: 
   containers: 
     - name: phpserve
-      image: "pelif/app-kubernetes-fullcycle:v2"    
+      image: "pelif/app-kubernetes-fullcycle:v4.6"    
