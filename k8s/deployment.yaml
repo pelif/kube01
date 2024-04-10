@@ -20,10 +20,10 @@ spec:
 
           resources:
             requests:
-              cpu: 100m
+              cpu: 0.01m
               memory: 20Mi
             limits:
-              cpu: 300m
+              cpu: 0.01m
               memory: 25Mi  
 
           startupProbe: 
@@ -62,14 +62,17 @@ spec:
             - secretRef:
                 name: phpserve-secret
 
-          # env: 
-          #   - name: NAME
-          #     valueFrom:
-          #       configMapKeyRef:
-          #         name: phpserve-env
-          #         key: NAME 
-          #   - name: AGE
-          #     valueFrom:
-          #       configMapKeyRef:
-          #         name: phpserve-env
-          #         key: AGE 
+          volumeMounts: 
+            - mountPath: "/myfiles"
+              name: phpserve-pvc
+              readOnly: true
+            - mountPath: "/app/files"
+              name: phpserve-pvc
+
+      volumes: 
+        - name: phpserve-pvc
+          persistentVolumeClaim: 
+            claimName: phpserve-pvc
+
+     
+

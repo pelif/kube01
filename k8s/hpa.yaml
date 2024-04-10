@@ -1,11 +1,11 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: goserver-hpa
+  name: phpserve-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
-    name: goserver
+    name: phpserve
     kind: Deployment
   minReplicas: 1
   maxReplicas: 5
